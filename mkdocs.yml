@@ -35,6 +35,9 @@ theme:
         - navigation.top
         - toc.integrate
 
+extra_css:
+  - css/armbian-extra.css
+
 extra:
   analytics:
     provider: google
@@ -48,7 +51,7 @@ extra:
       link: https://twitter.com/armbian
 
 plugins:
-   - search
+  - search
 #   - with-pdf:
 #       author: Armbian documentation team
 #       copyright: © 2024 by Armbian
@@ -65,6 +68,11 @@ markdown_extensions:
       auto_title: true
       linenums: true
       use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
       - name: mermaid
@@ -101,26 +109,47 @@ nav:
   - 'ARMBIAN OS':
         - 'Overview': 'index.md'
         - 'Getting Started' : 'User-Guide_Getting-Started.md'
-        - 'Armbian Config' : 'User-Guide_Armbian-Config.md'
         - 'Networking' : 'User-Guide_Networking.md'
         - 'Fine Tuning' : 'User-Guide_Fine-Tuning.md'
         - 'Basic Troubleshooting' : 'User-Guide_Basic-Troubleshooting.md'
         - 'Recovery' : 'User-Guide_Recovery.md'
         - 'Advanced Features' : 'User-Guide_Advanced-Features.md'
+        - 'Firstboot config': 'User-Guide_Autoconfig.md'
         - 'Device tree overlays' : 'User-Guide_Armbian_overlays.md'
         - 'FAQ' : 'User-Guide_FAQ.md'
         - 'Release Model' : 'Process_Release-Model.md'
         - 'Changelog' : 'Release_Changelog.md'
+  - 'ARMBIAN CONFIG':
+        - 'Overview': 'User-Guide_Armbian-Config.md'
+        - 'System': 'User-Guide_Armbian-Config/System.md'
+        - 'Network': 'User-Guide_Armbian-Config/Network.md'
+        - 'Localisation': 'User-Guide_Armbian-Config/Localisation.md'
+  - 'ARMBIAN SOFTWARE':
+        - 'Overview': 'User-Guide_Armbian-Software.md'
+        - 'Web hosting': 'User-Guide_Armbian-Software/WebHosting.md'
+        - 'Containers': 'User-Guide_Armbian-Software/Containers.md'
+        - 'Desktops': 'User-Guide_Armbian-Software/Desktops.md'
+        - 'Music': 'User-Guide_Armbian-Software/Music.md'
+        - 'Database': 'User-Guide_Armbian-Software/Database.md'        
+        - 'Downloaders': 'User-Guide_Armbian-Software/Downloaders.md'
+        - 'DNS blockers': 'User-Guide_Armbian-Software/DNS.md'
+        - 'Home Automation': 'User-Guide_Armbian-Software/HomeAutomation.md'
+        - 'Monitoring': 'User-Guide_Armbian-Software/Monitoring.md'
+        - 'DevTools': 'User-Guide_Armbian-Software/DevTools.md'
+        - 'Management': 'User-Guide_Armbian-Software/Management.md'
+        - 'Printing': 'User-Guide_Armbian-Software/Printing.md'
+        - 'Media': 'User-Guide_Armbian-Software/Media.md'
+        - 'Netconfig': 'User-Guide_Armbian-Software/Netconfig.md'
+
   - 'ARMBIAN BUILD FRAMEWORK' :
-        - 'Overview' : 'Developer-Guide_Welcome.md'
-        - 'Build Preparation' : 'Developer-Guide_Build-Preparation.md'
+        - 'Overview' : 'Developer-Guide_Overview.md'
+        - 'Getting Started' : 'Developer-Guide_Build-Preparation.md'
+        - 'Build Commands' : 'Developer-Guide_Build-Commands.md'
+        - 'Build Switches' : 'Developer-Guide_Build-Switches.md'
         - 'User Configurations' : 'Developer-Guide_User-Configurations.md'
         - 'Extensions Hooks' : 'Developer-Guide_Extensions-Hooks.md'
-        - 'Board Maintainers' : 'Release_Board-Maintainers.md'
         - 'Building with Multipass' : 'Developer-Guide_Building-with-Multipass.md'
-        - 'Build Options' : 'Developer-Guide_Build-Options.md'
         - 'Building with Docker' : 'Developer-Guide_Building-with-Docker.md'
-        - 'Adding Board Family' : 'Developer-Guide_Adding-Board-Family.md'
         - 'Extensions' : 'Developer-Guide_Extensions.md'
 
   - 'ARMBIAN COMMUNITY' :
@@ -130,11 +159,8 @@ nav:
 
   - 'CONTRIBUTE' :
         - 'Contribute' : 'Process_Contribute.md'
-        - 'Managing_Workflow' : 'Process_Managing_Workflow.md'
-        - 'Armbian Task Tracking' : 'Process_Armbian-Task-Tracking.md'
-        - 'Merge Policy' : 'Process_Merge-Policy.md'
+        - 'Armbian config': 'Contribute/Armbian-config.md'
+        - 'Mirrors' : 'Mirrors.md'
+        - 'Automation' : 'Process_CI.md'
         - 'Board Support Rules' : 'User-Guide_Board-Support-Rules.md'
-        - 'Maintainers_Procedures_and_Guidelines' : 'Board_Maintainers_Procedures_and_Guidelines.md'
-        - 'CI' : 'Process_CI.md'
-        - 'Review_Procedures_and_Guidelines' : 'Development-Code_Review_Procedures_and_Guidelines.md'
 
